@@ -1,0 +1,14 @@
+
+<table id="forums" class="table-hover">
+  <col>
+  <col width="10%">
+
+  <tr>
+      <th>Service</th>
+		  <th class="text-right">Status</th>
+  </tr>
+
+  <tbody>
+	<%= render :partial => 'status', :collection => @statuses %>
+  </tbody>
+</table>

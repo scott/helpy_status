@@ -1,3 +1,4 @@
-= HelpyStatus
+# Helpy Status (WIP)
 
-This project rocks and uses MIT-LICENSE.
+Example Helpy extension to add a system status board to Helpy.  Currently under development
+and requires specific hooks in Helpy which are not available yet.

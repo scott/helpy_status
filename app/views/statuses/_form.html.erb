@@ -1,0 +1,29 @@
+<%= bootstrap_form_for(@status) do |f| %>
+  <% if @status.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@status.errors.count, "error") %> prohibited this status from being saved:</h2>
+
+      <ul>
+      <% @status.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :service, class: 'form-control' %>
+  </div>
+  <div class="field">
+    <%= f.text_area :description, class: 'form-control'  %>
+  </div>
+  <div class="field">
+    <%= f.text_field :status, class: 'form-control'  %>
+  </div>
+  <div class="field">
+    <%= f.check_box :active, class: 'form-control'  %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

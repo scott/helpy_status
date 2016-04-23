@@ -9,9 +9,9 @@ Gem::Specification.new do |s|
   s.version     = HelpyStatus::VERSION
   s.authors     = ["Scott Miller"]
   s.email       = ["scott.miller.utah@gmail.com"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of HelpyStatus."
-  s.description = "TODO: Description of HelpyStatus."
+  s.homepage    = "http://helpy.io/"
+  s.summary     = "A simple add-on for the Helpy Support system."
+  s.description = "Adds a status board to Helpy to show the current status of systems."
   s.license     = "MIT"
 
   s.files = Dir["{app,config,db,lib}/**/*", "MIT-LICENSE", "Rakefile", "README.rdoc"]
