@@ -1,0 +1,16 @@
+<% status = admin %>
+<tr>
+  <td><span class="more-important"><%= status.service %></span>
+    <br/><span class="less-important"><%= status.description %></span>
+  </td>
+  <td class="text-right"><%= status.status %></td>
+  <td class="text-right">
+    <div class="btn-group">
+      <span id="row-<%= status.id %>" data-toggle="dropdown" aria-expanded="false" class='btn dropdown-toggle glyphicon glyphicon-align-justify'></span>
+      <ul class="dropdown-menu dropdown-menu-right" role="menu" data-hook="admin_context_menu">
+        <li><%= link_to t(:edit, default: 'Edit'), edit_status_path(status.id) %></li>
+        <li><%= link_to t(:delete, default: 'Delete'), status, data: {confirm: t(:delete_confirm, default: 'Please confirm you really want to DELETE this')}, method: :delete, remote: true, class: 'less-important' %></li>
+      </ul>
+    </div>
+  </td>
+</tr>

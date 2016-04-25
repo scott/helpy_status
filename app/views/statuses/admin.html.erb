@@ -1,13 +1,19 @@
+<h2>System Status <span class="admin-options pull-right">
+  <%= link_to t(:new_status, default: "Add a System"), new_status_path, class: 'btn btn-primary' %>
+</span></h2>
+
 <table id="forums" class="table-hover">
   <col>
+  <col width="10%">
   <col width="10%">
 
   <tr>
       <th>Service</th>
 		  <th class="text-right">Status</th>
+      <th></th>
   </tr>
 
   <tbody>
-	<%= render :partial => 'status', :collection => @statuses %>
+	<%= render :partial => 'statuses/admin', :collection => @statuses %>
   </tbody>
 </table>

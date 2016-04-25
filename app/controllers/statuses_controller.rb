@@ -39,7 +39,7 @@ class StatusesController < ApplicationController
     @status = Status.new(status_params)
 
     if @status.save
-      redirect_to @status, notice: 'Status was successfully created.'
+      redirect_to admin_status_path
     else
       render :new
     end
@@ -48,7 +48,7 @@ class StatusesController < ApplicationController
   # PATCH/PUT /statuses/1
   def update
     if @status.update(status_params)
-      redirect_to @status, notice: 'Status was successfully updated.'
+      redirect_to admin_status_path
     else
       render :edit
     end
@@ -57,7 +57,7 @@ class StatusesController < ApplicationController
   # DELETE /statuses/1
   def destroy
     @status.destroy
-    redirect_to statuses_url, notice: 'Status was successfully destroyed.'
+    redirect_to admin_status_path
   end
 
   private
